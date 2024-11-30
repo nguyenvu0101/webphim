@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="../../img/logo/logo.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/grid.css" />
+  <link rel="stylesheet" href="/fonts/fontawesome-free-6.5.2-web/css/all.min.css" />
+  <title>NOTFLEX - Niềm Vui Của Mọi Nhà</title>
+</head>
+
+<body>
+  {{> header}}
+
+  {{{body}}}
+
+  {{> footer}}
+</body>
+<script src="/js/main.js"></script>
+<script>
+  document.querySelector(".header__directory-link.category").addEventListener("click", (e) => {
+    e.preventDefault(); // Ngăn chặn hành động mặc định của thẻ a
+    console.log("click");
+    const categoryList = document.querySelector(".header__directory--category");
+
+    // Chuyển đổi độ hiển thị của danh sách
+    if (categoryList.style.visibility === "visible") {
+      categoryList.style.visibility = "hidden"; // Ẩn danh sách
+    } else {
+      categoryList.style.visibility = "visible"; // Hiển thị danh sách
+    }
+  });
+</script>
+
+</html>
