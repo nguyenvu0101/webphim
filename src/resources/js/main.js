@@ -6,8 +6,10 @@ window.addEventListener("scroll", function () {
   // Kiểm tra xem người dùng đang cuộn lên hay cuộn xuống
   if (prevScrollPos > currentScrollPos) {
     // Cuộn lên: hiển thị navbar
-    header.style.backgroundColor = "transparent";
-    header.style.borderBottom="none";
+    // header.style.backgroundColor = "transparent";
+    // header.style.borderBottom="none";
+    header.style.backgroundColor = "black";
+    header.style.borderBottom = "1px solid #2b2f3e";
   } else {
     // Cuộn xuống: ẩn navbar
     header.style.backgroundColor = "black";
